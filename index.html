@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>RL Mods Hub — Mods de Rocket League</title>
+  <meta name="description" content="Alpha Boost, texturas, coches y plugins estilo BakkesMod. Compatible con la última season, probado en ranked, sin cuenta.">
+  <meta name="theme-color" content="#070b14">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="noindex">
+  <meta property="og:title" content="RL Mods Hub — Alpha Boost y mods de Rocket League">
+  <meta property="og:description" content="Boost infinito, presets de Octane, Fennec y Dominus, y plugins estilo BakkesMod. Compatible con la última season.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='15' fill='%23070b14'/%3E%3Ccircle cx='16' cy='16' r='10' fill='%23ff7a18'/%3E%3Cpath d='M16 6a10 10 0 0 1 0 20' fill='%2300b4ff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Broma visual. No descarga nada ni instala software. -->
+  <div class="site">
+    <header class="header">
+      <div class="wrap header-inner">
+        <a class="logo" href="#inicio">
+          <span class="logo-ball" aria-hidden="true"></span>
+          <span class="logo-text">RL Mods <strong>Hub</strong></span>
+        </a>
+        <nav class="nav" aria-label="Secciones">
+          <button type="button" data-filter="todos" data-jump="inicio">Inicio</button>
+          <button type="button" data-filter="todos" data-jump="mods">Mods</button>
+          <button type="button" data-filter="coches" data-jump="mods">Coches</button>
+          <button type="button" data-filter="texturas" data-jump="mods">Texturas</button>
+          <button type="button" data-filter="plugins" data-jump="mods">BakkesMod</button>
+        </nav>
+        <button type="button" class="btn-ghost" data-jump="instalar">Instalar</button>
+      </div>
+    </header>
+
+    <main id="inicio">
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div class="hero-copy">
+            <p class="kicker">Season actual · actualizado el <time id="hoy">4 de octubre de 2026</time></p>
+            <h1>Mods de Rocket League para ranked y freeplay</h1>
+            <p class="lede">Coches, texturas, goal explosions y un Alpha Boost con recarga infinita. Compatible con la última season, probado en ranked y, según quien lo sube, sin ban. Descarga directa, sin cuenta.</p>
+            <div class="hero-actions">
+              <button type="button" class="btn-dl">Descargar Alpha Boost</button>
+              <button type="button" class="btn-ghost" data-filter="coches" data-jump="mods">Ver coches</button>
+            </div>
+            <dl class="stats">
+              <div>
+                <dt>Mods</dt>
+                <dd>1.284</dd>
+              </div>
+              <div>
+                <dt>Descargas</dt>
+                <dd>4,2M</dd>
+              </div>
+              <div>
+                <dt>Bans reportados</dt>
+                <dd>0</dd>
+              </div>
+            </dl>
+          </div>
+          <div class="hero-art">
+            <img src="img/hero-gameplay.webp" width="1280" height="720" alt="Partido de Rocket League: un coche en el aire con estela de boost, pelota y estadio">
+          </div>
+        </div>
+      </section>
+
+      <div class="wrap">
+        <aside class="banner">
+          <p><strong>Alpha Boost 3.2</strong> va primero esta semana. <span id="live-count">12.480</span> descargas hoy. Boost infinito, compatible con la última season.</p>
+          <button type="button" class="btn-dl btn-dl-small">DESCARGAR</button>
+        </aside>
+
+        <section class="catalog" id="mods">
+          <div class="catalog-head">
+            <h2>Top de la semana</h2>
+            <form id="search-form" class="search" role="search" action="#">
+              <label class="sr-only" for="q">Buscar mods</label>
+              <input id="q" type="search" placeholder="Busca Octane, flip reset, boost…" autocomplete="off" enterkeyhint="search">
+            </form>
+          </div>
+          <div class="filters" role="toolbar" aria-label="Filtrar mods">
+            <button type="button" class="chip is-on" data-filter="todos">Todos</button>
+            <button type="button" class="chip" data-filter="boost">Boost</button>
+            <button type="button" class="chip" data-filter="texturas">Texturas</button>
+            <button type="button" class="chip" data-filter="plugins">Plugins</button>
+            <button type="button" class="chip" data-filter="coches">Coches</button>
+            <button type="button" class="chip" data-filter="efectos">Efectos</button>
+          </div>
+
+          <div class="grid" id="grid">
+            <article class="card" data-cat="boost" data-search="alpha boost infinito recarga ranked freeplay flip reset ceiling shot sin ban season">
+              <div class="card-art">
+                <span class="ribbon">Top</span>
+                <img src="img/mod-alpha-boost.webp" width="960" height="540" alt="Coche de Rocket League soltando una llamarada de boost naranja">
+                <span class="pill">Boost</span>
+              </div>
+              <div class="card-body">
+                <h3>Alpha Boost</h3>
+                <p>Boost infinito: recarga al tocar el suelo. OP en freeplay para flip resets y ceiling shots. Probado en ranked; el post dice sin ban.</p>
+                <p class="rating" aria-label="Valoración 4,9 de 5">★★★★★ <span>4,9</span></p>
+                <dl class="meta">
+                  <div><dt>Peso</dt><dd>2,4 MB</dd></div>
+                  <div><dt>Descargas</dt><dd>128.431</dd></div>
+                  <div><dt>Versión</dt><dd>3.2</dd></div>
+                </dl>
+                <p class="free">Gratis · sin cuenta</p>
+                <button type="button" class="btn-dl">DESCARGAR</button>
+              </div>
+            </article>
+
+            <article class="card" data-cat="texturas" data-search="pack texturas neon arena estadio mannfield noche season">
+              <div class="card-art">
+                <img src="img/mod-neon-arena.webp" width="960" height="540" alt="Estadio Mannfield de noche, con neones azules y naranjas">
+                <span class="pill">Texturas</span>
+              </div>
+              <div class="card-body">
+                <h3>Pack Neon Arena</h3>
+                <p>Mannfield night con neón azul y naranja. Compatible con la última season. En ranked de noche se ve el campo entero.</p>
+                <p class="rating" aria-label="Valoración 4,7 de 5">★★★★★ <span>4,7</span></p>
+                <dl class="meta">
+                  <div><dt>Peso</dt><dd>86 MB</dd></div>
+                  <div><dt>Descargas</dt><dd>54.902</dd></div>
+                  <div><dt>Versión</dt><dd>1.8</dd></div>
+                </dl>
+                <p class="free">Gratis · sin cuenta</p>
+                <button type="button" class="btn-dl">DESCARGAR</button>
+              </div>
+            </article>
+
+            <article class="card" data-cat="plugins" data-search="bakkesmod plus overlay plugins velocidad boost ranked champ gc">
+              <div class="card-art">
+                <img src="img/mod-bakkesmod.webp" width="960" height="540" alt="Saque inicial de Rocket League con el marcador y el HUD del partido">
+                <span class="pill">Plugins</span>
+              </div>
+              <div class="card-body">
+                <h3>BakkesMod Plus</h3>
+                <p>Overlay de velocidad, boost y plugins al estilo BakkesMod. Para saber si el toque era mech o suerte. Un clic, sin mover carpetas a mano.</p>
+                <p class="rating" aria-label="Valoración 4,8 de 5">★★★★★ <span>4,8</span></p>
+                <dl class="meta">
+                  <div><dt>Peso</dt><dd>14 MB</dd></div>
+                  <div><dt>Descargas</dt><dd>310.221</dd></div>
+                  <div><dt>Versión</dt><dd>2.0</dd></div>
+                </dl>
+                <p class="free">Gratis · sin cuenta</p>
+                <button type="button" class="btn-dl">DESCARGAR</button>
+              </div>
+            </article>
+
+            <article class="card" data-cat="coches" data-search="octane carbono coche preset gc ssl llantas rgb">
+              <div class="card-art">
+                <img src="img/mod-octane.webp" width="960" height="540" alt="Octane oficial de Rocket League, de perfil, con boost">
+                <span class="pill">Coches</span>
+              </div>
+              <div class="card-body">
+                <h3>Octane Carbono</h3>
+                <p>Octane carbono con llantas RGB. El preset de los clips de GC y SSL. No te sube el rank; el kickoff sí se ve pro.</p>
+                <p class="rating" aria-label="Valoración 4,9 de 5">★★★★★ <span>4,9</span></p>
+                <dl class="meta">
+                  <div><dt>Peso</dt><dd>41 MB</dd></div>
+                  <div><dt>Descargas</dt><dd>77.014</dd></div>
+                  <div><dt>Versión</dt><dd>1.4</dd></div>
+                </dl>
+                <p class="free">Gratis · sin cuenta</p>
+                <button type="button" class="btn-dl">DESCARGAR</button>
+              </div>
+            </article>
+
+            <article class="card" data-cat="coches" data-search="fennec fantasma carroceria ranked freestyle flip reset">
+              <div class="card-art">
+                <img src="img/mod-fennec.webp" width="960" height="540" alt="Fennec oficial de Rocket League en arte del juego">
+                <span class="pill">Coches</span>
+              </div>
+              <div class="card-body">
+                <h3>Fennec Fantasma</h3>
+                <p>Fennec semitransparente, el body de ranked en versión fantasma. En freestyle se ve el flip reset; el poste sigue ahí.</p>
+                <p class="rating" aria-label="Valoración 4,6 de 5">★★★★☆ <span>4,6</span></p>
+                <dl class="meta">
+                  <div><dt>Peso</dt><dd>38 MB</dd></div>
+                  <div><dt>Descargas</dt><dd>41.558</dd></div>
+                  <div><dt>Versión</dt><dd>1.1</dd></div>
+                </dl>
+                <p class="free">Gratis · sin cuenta</p>
+                <button type="button" class="btn-dl">DESCARGAR</button>
+              </div>
+            </article>
+
+            <article class="card" data-cat="coches" data-search="dominus inferno llamas trail air dribble season">
+              <div class="card-art">
+                <img src="img/mod-dominus.webp" width="960" height="540" alt="Dominus oficial de Rocket League con librea de llamas">
+                <span class="pill">Coches</span>
+              </div>
+              <div class="card-body">
+                <h3>Dominus Inferno</h3>
+                <p>Dominus con llamas y trail de chispas. Para air dribbles que quieres que se vean en el clip. Compatible con la última season.</p>
+                <p class="rating" aria-label="Valoración 4,5 de 5">★★★★☆ <span>4,5</span></p>
+                <dl class="meta">
+                  <div><dt>Peso</dt><dd>44 MB</dd></div>
+                  <div><dt>Descargas</dt><dd>33.870</dd></div>
+                  <div><dt>Versión</dt><dd>2.3</dd></div>
+                </dl>
+                <p class="free">Gratis · sin cuenta</p>
+                <button type="button" class="btn-dl">DESCARGAR</button>
+              </div>
+            </article>
+
+            <article class="card" data-cat="efectos" data-search="explosion supernova goal explosion gol ranked kickoff">
+              <div class="card-art">
+                <img src="img/mod-supernova.webp" width="960" height="540" alt="Explosión de gol en un partido de Rocket League">
+                <span class="pill">Efectos</span>
+              </div>
+              <div class="card-body">
+                <h3>Explosión Supernova</h3>
+                <p>Goal explosion que tapa media pista. Quien encaja el gol pierde el kickoff siguiente. Probado en casual y en ranked.</p>
+                <p class="rating" aria-label="Valoración 4,8 de 5">★★★★★ <span>4,8</span></p>
+                <dl class="meta">
+                  <div><dt>Peso</dt><dd>22 MB</dd></div>
+                  <div><dt>Descargas</dt><dd>90.112</dd></div>
+                  <div><dt>Versión</dt><dd>3.0</dd></div>
+                </dl>
+                <p class="free">Gratis · sin cuenta</p>
+                <button type="button" class="btn-dl">DESCARGAR</button>
+              </div>
+            </article>
+
+            <article class="card" data-cat="efectos" data-search="estela cometa trail boost ceiling shot freestyle">
+              <div class="card-art">
+                <img src="img/mod-estela.webp" width="960" height="540" alt="Coche de Rocket League dejando una estela de boost en la pista">
+                <span class="pill">Efectos</span>
+              </div>
+              <div class="card-body">
+                <h3>Estela Cometa</h3>
+                <p>Trail naranja largo, el de los clips de freestyle. Se ve en ceiling shots y también cuando llegas tarde al rotate.</p>
+                <p class="rating" aria-label="Valoración 4,4 de 5">★★★★☆ <span>4,4</span></p>
+                <dl class="meta">
+                  <div><dt>Peso</dt><dd>9 MB</dd></div>
+                  <div><dt>Descargas</dt><dd>28.640</dd></div>
+                  <div><dt>Versión</dt><dd>1.0</dd></div>
+                </dl>
+                <p class="free">Gratis · sin cuenta</p>
+                <button type="button" class="btn-dl">DESCARGAR</button>
+              </div>
+            </article>
+          </div>
+          <p id="empty" class="empty" hidden>Ningún mod con esa búsqueda. Prueba con Octane, boost o Bakkes.</p>
+        </section>
+
+        <section class="quotes" aria-label="Opiniones">
+          <figure>
+            <blockquote>Octane Carbono en freeplay para encadenar flip resets. En ranked lo quité a los dos partidos.</blockquote>
+            <figcaption>Alex · GC2</figcaption>
+          </figure>
+          <figure>
+            <blockquote>BakkesMod Plus me marca la velocidad del toque. El 50 sigue sin ser mío, pero ahora lo veo.</blockquote>
+            <figcaption>Nico · Champ 3</figcaption>
+          </figure>
+          <figure>
+            <blockquote>Alpha Boost solo en privado. Ceiling shots sin mirar el medidor. En ranked no lo he abierto.</blockquote>
+            <figcaption>Lucía · SSL</figcaption>
+          </figure>
+        </section>
+
+        <section class="steps" id="instalar">
+          <h2>Instalación en un minuto</h2>
+          <ol>
+            <li>
+              <span>1</span>
+              <div>
+                <h3>Descarga</h3>
+                <p>Botón naranja del mod. El zip pesa poco y no pide cuenta.</p>
+              </div>
+            </li>
+            <li>
+              <span>2</span>
+              <div>
+                <h3>Cierra el juego</h3>
+                <p>Rocket League tiene que estar cerrado. Si sigue abierto, el mod no entra.</p>
+              </div>
+            </li>
+            <li>
+              <span>3</span>
+              <div>
+                <h3>Carpeta de mods</h3>
+                <p>Descomprime, entra a un freeplay y pruébalo antes de hacer cola en ranked.</p>
+              </div>
+            </li>
+          </ol>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <p><strong>RL Mods Hub</strong> es un fan site. No oficial.</p>
+        <p>Rocket League es una marca de Psyonix, LLC y Epic Games. No estamos afiliados ni distribuimos el juego. Las fotos son capturas de Steam y arte oficial.</p>
+      </div>
+    </footer>
+  </div>
+
+  <div class="glitch-overlay" hidden></div>
+  <div id="popup-layer"></div>
+
+  <section id="rickroll" class="rickroll" hidden>
+    <div class="rick-inner">
+      <p class="rick-kicker">Fin del bait</p>
+      <h2>TE HAN RICKROLLEADO 😂</h2>
+      <p class="rick-sub">No hay virus y no se ha bajado ningún archivo. El Alpha Boost no existe. Tu PC está bien: cierra la pestaña cuando quieras.</p>
+      <div class="video-frame">
+        <iframe
+          id="rick-frame"
+          title="Never Gonna Give You Up — Rick Astley"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <a class="btn-dl rick-fallback" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Si no reproduce, ábrelo en YouTube</a>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
